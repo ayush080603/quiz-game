@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🧠 Knowledge Quest</h1>
+            <p>Test your knowledge with our interactive quiz!</p>
+        </header>
+
+        <div class="quiz-container" id="quiz-container">
+            <div class="progress-section">
+                <div class="progress-info">
+                    <span id="question-counter">Question 1 of 15</span>
+                    <span id="score-display">Score: 0/0</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="question-card" id="question-card">
+                <h2 id="question-text">Loading question...</h2>
+                <div class="answer-buttons" id="answer-buttons">
+                    <button class="btn btn-true" onclick="answerQuestion(true)">
+                        ✓ True
+                    </button>
+                    <button class="btn btn-false" onclick="answerQuestion(false)">
+                        ✗ False
+                    </button>
+                </div>
+            </div>
+
+            <div class="result-section" id="result-section" style="display: none;">
+                <div class="result-card" id="result-card">
+                    <div class="result-icon" id="result-icon"></div>
+                    <h3 id="result-text"></h3>
+                    <p id="result-explanation"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="continue-prompt" id="continue-prompt" style="display: none;">
+            <div class="continue-card">
+                <h2>🎯 Great Progress!</h2>
+                <div class="progress-summary">
+                    <p>You've completed <span id="completed-questions">5</span> questions</p>
+                    <p><strong>Current Score: <span id="current-score">0/5</span></strong></p>
+                </div>
+                <p>Would you like to continue with the quiz?</p>
+                <div class="continue-buttons">
+                    <button class="btn btn-continue" onclick="continueQuiz(true)">Yes, Continue</button>
+                    <button class="btn btn-finish" onclick="continueQuiz(false)">No, Finish</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="final-results" id="final-results" style="display: none;">
+            <div class="results-card">
+                <div class="trophy">🏆</div>
+                <h2>Quiz Complete! 🎉</h2>
+                <div class="final-score">
+                    <h3>Final Score</h3>
+                    <div class="score-display" id="final-score-display">0/15</div>
+                    <p id="performance-message">Keep Learning! 📚</p>
+                </div>
+                <button class="btn btn-restart" onclick="restartQuiz()">Take Quiz Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
