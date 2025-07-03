@@ -87,3 +87,7 @@ quiz-game/
   Ayush Sinha
   📫 LinkedIn: www.linkedin.com/in/sinhaayush0806
   🌐 GitHub: https://github.com/ayush080603
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
